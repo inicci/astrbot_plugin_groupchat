@@ -33,7 +33,7 @@ class MyPlugin(Star):
     
     @event_message_type(EventMessageType.GROUP_MESSAGE)
     async def Group_Message(self,event:AstrMessageEvent):
-        message_str=event.message_str()
+        message_str=event.message_str
         message_sender_id=event.get_sender_id()
         message_sender_name=event.get_sender_name()
         yield event.plain_result(f"内容：{message_str}/n发送者:{message_sender_name}")
